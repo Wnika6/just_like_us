@@ -1,8 +1,5 @@
-@use './colors' as colors;
-@use './animations' as animations;
-@use './small' as small;
-@use './medium' as medium;
-@use './large' as large;
+@use './colors' as c;
+@use './animations' as u;
 
 *,
 ::before,
@@ -19,15 +16,15 @@ html {
 body {
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-size: 1.6rem;
-	color: colors.$black;
-	background-color: colors.$white;
+	color: c.$black;
+	background-color: c.$white;
 }
 
 h1.company-name {
 	margin-bottom: 0.5em;
 	font-size: 3rem;
 	font-family: 'Gowun Dodum', sans-serif;
-	color: colors.$gray;
+	color: c.$gray;
 }
 
 .wrapper {
@@ -103,9 +100,50 @@ h1.company-name {
 	&-inner,
 	&-inner::before,
 	&-inner::after {
-		background-color: colors.$black;
+		background-color: c.$black;
 		z-index: 500;
 	}
 }
 
-// font-family: 'Gowun Dodum', sans-serif;
+.nav {
+	&-mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: rgb(175, 175, 175);
+		z-index: 10;
+		transform: translateX(-102%);
+		transition: transform 0.3s;
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+	&-desktop {
+		display: none;
+	}
+	&__link {
+		position: relative;
+		display: inline-block;
+		margin: 0.5em;
+		padding: 0.5em;
+		font-size: 2.3rem;
+		text-transform: capitalize;
+		text-decoration: none;
+
+		&:hover {
+			color: gold;
+		}
+		
+	}
+}
+
+@import './large';
+@import './medium';
+@import './small';
