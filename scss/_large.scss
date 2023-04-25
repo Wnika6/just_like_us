@@ -16,6 +16,7 @@
 		&__img {
 			grid-row: 1/4;
 			grid-column: 2/3;
+			background-image: url(../img/headlg.jpg);
 		}
 		&__arrow {
 			display: block;
@@ -73,7 +74,7 @@
 				content: '';
 				width: 100%;
 				height: 100%;
-				border: 1px solid gold;
+				border: 1px solid c.$main;
 				opacity: 0;
 			}
 			&:hover::before {
