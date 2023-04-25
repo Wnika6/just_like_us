@@ -156,7 +156,7 @@ h1.company-name {
 }
 
 .cards {
-  background-color: rgb(178, 178, 215);
+  background-color: rgba(178, 178, 215, 0.707);
   overflow: hidden;
 }
 .cards__box {
@@ -173,13 +173,12 @@ h1.company-name {
   text-align: center;
   border: 1px solid transparent;
   border-radius: 8px;
-  background-color: rgb(129, 139, 182);
+  background-color: rgba(120, 112, 168, 0.171);
   transition: background-color 0.3s border 0.3s;
   z-index: 5;
 }
 .cards__card:hover {
-  background-color: rgb(160, 129, 164);
-  border: 1px solid red;
+  background-color: rgba(74, 88, 130, 0.39);
   z-index: 1;
 }
 .cards__card::before {
@@ -187,7 +186,7 @@ h1.company-name {
   content: "";
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  border: 1px solid rgb(136, 28, 140);
   border-radius: 8px;
   opacity: 0;
 }
