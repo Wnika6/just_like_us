@@ -420,23 +420,22 @@ h1.company-name {
     grid-column: 7/10;
     grid-row: 1/2;
   }
+  .plans {
+    padding: 8em 2em;
+  }
+  .plans__box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+  }
+  .plans__item {
+    margin: 0 1em;
+  }
+  .plans__item-name {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
-.plans {
-  padding: 8em 2em;
-}
-.plans__box {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-}
-.plans__item {
-  margin: 0 1em;
-}
-.plans__item-name {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 @media (min-width: 576px) {
   .info {
     grid-template-areas: "title box" "title box" "title box";
