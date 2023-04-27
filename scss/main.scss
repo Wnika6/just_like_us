@@ -243,7 +243,7 @@ h1.company-name {
 	&__box-img {
 		width: 100%;
 		object-fit: cover;
-		filter: grayscale(1);
+		filter: grayscale(0.8);
 	}
 	&__box-title {
 		margin: 0.3em 0;
@@ -269,6 +269,40 @@ h1.company-name {
 		&:hover {
 			color: c.$detail;
 		}
+	}
+}
+
+// plans
+
+.plans {
+	padding: 6em 2em;
+	background-color: rgba(128, 128, 128, 0.378);
+
+	&__box {
+		margin: 1em 0;
+		padding: 2em 1em;
+		text-align: center;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		background-color: c.$main;
+		cursor: pointer;
+
+		&:hover {
+			background-color: c.$detail;
+			border: 2px solid c.$detail-darker;
+		}
+	}
+	&__item {
+		margin: 1em 0;
+	}
+	&__item-icon {
+		width: 50px;
+	}
+	&__item-name {
+		margin-top: 0;
+		margin-bottom: 1.5em;
+		font-size: 1.8rem;
+		color: c.$detail-darker;
 	}
 }
 
