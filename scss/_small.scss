@@ -1,7 +1,7 @@
 @media (min-width: 576px) {
 	.info {
 		grid-template-areas: 'title box' 'title box' 'title box';
-		padding: 10em 2em;
+		padding: 6em 2em;
 		&__box {
 			display: grid;
 			justify-content: end;

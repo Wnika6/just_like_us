@@ -232,7 +232,7 @@ h1.company-name {
 	position: relative;
 	display: grid;
 	grid-template-areas: 'title' 'box' 'box';
-	padding: 6em 2em;
+	padding: 3em 2em;
 
 	&__title {
 		grid-area: title;
@@ -246,10 +246,11 @@ h1.company-name {
 		filter: grayscale(0.8);
 	}
 	&__box-title {
+		padding: 0.5em 0;
 		margin: 0.3em 0;
 		font-size: 2.6rem;
 		color: c.$main;
-		font-weight: 400;
+		font-weight: bold;
 	}
 
 	&__box-text {
@@ -282,18 +283,22 @@ h1.company-name {
 		margin: 1em 0;
 		padding: 2em 1em;
 		text-align: center;
-		border: 1px solid transparent;
+		border: 2px solid transparent;
 		border-radius: 8px;
-		background-color: c.$main;
+		background-color: c.$detail;
 		cursor: pointer;
 
 		&:hover {
-			background-color: c.$detail;
 			border: 2px solid c.$detail-darker;
+			color: rgb(170, 40, 202);
+			background-color: darkgray;
 		}
 	}
 	&__item {
 		margin: 1em 0;
+		.p-bold {
+			font-weight: bold;
+		}
 	}
 	&__item-icon {
 		width: 50px;
@@ -302,10 +307,147 @@ h1.company-name {
 		margin-top: 0;
 		margin-bottom: 1.5em;
 		font-size: 1.8rem;
-		color: c.$detail-darker;
+		color: black;
 	}
 }
 
-@import './large';
-@import './medium';
+// newsletter
+
+.newsletter {
+	padding: 6em 2em;
+	background-color: rgba(121, 121, 121, 0.711);
+	text-align: center;
+	&__text {
+		padding: 1em;
+		margin-bottom: 1em;
+		font-size: 4rem;
+		font-weight: 400;
+	}
+	&__form {
+		&__input {
+			margin-bottom: 1em;
+			padding: 1em;
+			width: 100%;
+			background-color: white;
+			border: 1px solid transparent;
+		}
+		&__button {
+			padding: 1em;
+			border: 2px solid c.$detail-darker;
+			border-radius: 5%;
+			background-color: c.$detail;
+			color: black;
+			font-weight: bold;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				color: rgb(170, 40, 202);
+				background-color: darkgray;
+			}
+		}
+	}
+}
+
+// gallery
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 8fr);
+
+	&__item {
+		height: 16em;
+		width: 100%;
+		object-fit: cover;
+
+		&:nth-child(odd) {
+			display: none;
+		}
+	}
+}
+
+// contact
+
+.contact {
+	padding: 6em 2em;
+	background-color: rgb(194, 193, 193);
+
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	&__form-box {
+		label {
+			display: block;
+			margin-bottom: 0.5em;
+			font-size: 2rem;
+		}
+
+		textarea {
+			max-width: 100%;
+			width: 100%;
+			min-width: 100%;
+		}
+
+		input,
+		textarea {
+			padding: 1em 2em;
+			margin-bottom: 2em;
+			width: 100%;
+			color: rgba(135, 90, 139, 0.582);
+			background: none;
+			border: 2px solid rgb(127, 25, 171);
+
+			&:focus {
+				outline: none;
+				border: 1px solid rgb(104, 102, 102);
+			}
+		}
+
+		&:nth-child(1) {
+			grid-column: 1/-1;
+			grid-row: 1/2;
+		}
+
+		&:nth-child(2) {
+			grid-column: 1/-1;
+			grid-row: 2/3;
+		}
+
+		&:nth-child(3) {
+			grid-column: 1/-1;
+			grid-row: 3/4;
+		}
+	}
+	&__form-btn {
+		grid-column: 1/3;
+		grid-row: 4/5;
+		padding: 1em;
+		border: 2px solid rgb(127, 25, 171);
+		background-color: c.$detail;
+		font-weight: bold;
+		color: black;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			color: rgb(170, 40, 202);
+			background-color: darkgray;
+		}
+	}
+}
+
+.footer {
+	padding: 3em 1em;
+	border-top: 1px solid black;
+	text-align: center;
+	background-color: rgb(231, 227, 227);
+}
+
 @import './small';
+@import './medium';
+@import './large';
