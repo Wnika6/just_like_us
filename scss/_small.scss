@@ -1,5 +1,6 @@
 @media (min-width: 576px) {
 	.info {
+		// grid-template-areas: 'title box' 'title box' 'title box';
 		grid-template-areas: 'title box' 'title box' 'title box';
 		padding: 6em 2em;
 		&__box {
@@ -26,7 +27,7 @@
 			&--two {
 				bottom: 10%;
 				left: 10%;
-				width: 30%;
+				width: 45%;
 				animation: rotate-left 140s infinite linear;
 			}
 			&--three {
@@ -38,7 +39,7 @@
 			&--four {
 				top: 55%;
 				left: -10%;
-				width: 15%;
+				width: 25%;
 				animation: rotate-right 140s infinite linear;
 			}
 		}

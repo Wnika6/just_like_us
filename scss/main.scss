@@ -231,7 +231,7 @@ h1.company-name {
 .info {
 	position: relative;
 	display: grid;
-	grid-template-areas: 'title' 'box' 'box';
+	grid-template-areas: 'title' 'box' 'box' ;
 	padding: 3em 2em;
 
 	&__title {
@@ -243,6 +243,7 @@ h1.company-name {
 	&__box-img {
 		width: 100%;
 		object-fit: cover;
+		border-radius: 3%;
 		filter: grayscale(0.8);
 	}
 	&__box-title {
@@ -276,7 +277,7 @@ h1.company-name {
 // plans
 
 .plans {
-	padding: 6em 2em;
+	padding: 4em 2em;
 	background-color: rgba(128, 128, 128, 0.378);
 
 	&__box {
@@ -308,6 +309,7 @@ h1.company-name {
 		margin-bottom: 1.5em;
 		font-size: 1.8rem;
 		color: black;
+		
 	}
 }
 

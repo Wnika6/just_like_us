@@ -252,6 +252,7 @@ h1.company-name {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 3%;
   filter: grayscale(0.8);
 }
 .info__box-title {
@@ -281,7 +282,7 @@ h1.company-name {
 }
 
 .plans {
-  padding: 6em 2em;
+  padding: 4em 2em;
   background-color: rgba(128, 128, 128, 0.378);
 }
 .plans__box {
@@ -459,7 +460,7 @@ h1.company-name {
   .info__bg-icon--two {
     bottom: 10%;
     left: 10%;
-    width: 30%;
+    width: 45%;
     animation: rotate-left 140s infinite linear;
   }
   .info__bg-icon--three {
@@ -471,7 +472,7 @@ h1.company-name {
   .info__bg-icon--four {
     top: 55%;
     left: -10%;
-    width: 15%;
+    width: 25%;
     animation: rotate-right 140s infinite linear;
   }
 }
@@ -492,7 +493,7 @@ h1.company-name {
     grid-row: 1/2;
   }
   .plans {
-    padding: 8em 2em;
+    padding: 6em 2em;
   }
   .plans__box {
     display: grid;
